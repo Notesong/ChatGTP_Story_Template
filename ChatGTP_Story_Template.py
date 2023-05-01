@@ -6,7 +6,7 @@ import openai
 openai.api_key = "your_key"
 
 completion = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo", 
+    model="gpt-3.5-turbo", # You can change this based on your needs.
     messages=[
         {"role": "system", "content": "You are a [genre] author. Your task is to write [genre] stories in a vivid and intriguing writing style."},
         
@@ -17,7 +17,7 @@ completion = openai.ChatCompletion.create(
         # {"role": "user", "content": "Fill out the template above for a [genre] story"},
         # {"role": "assistant", "content": ""},
 
-        # Follow the same basic idea relayed on line 13 of un-commenting and commenting out for the rest of the program (ex: uncomment line 22, run the program, put the results into line 23 and un-comment line 23, and then comment out line 22 again).
+        # Follow the same basic idea relayed on line 13 of un-commenting and commenting out for the rest of the program (ex: un-comment line 22, run the program, put the results into line 23 and un-comment line 23, and then comment out line 22 again).
 
         # {"role": "user", "content": "Build a story outline from the factors above."},
         # {"role": "assistant", "content": ""},
