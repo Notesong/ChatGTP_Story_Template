@@ -4,7 +4,7 @@
 
 # On that note: This is not a programming tutorial. A basic understanding of Python is recommended, but not necessary as long as the template is followed. If you plan on making big changes, get brushed up on your Python!
 
-# I strongly advise putting every AI response into a document of some type so that the response is not lost, in case the terminal history gets corrupted, etc. Furthermore, sometimes things will get weird or just go in a direction you don't like. Don't be afraid to try the request (or edit the request) again if you get something that doesn't fit your vision. These AI's simply don't have a human's level of attention to details and abstract thinking (nor have a true understanding of real life) and do make mistakes or write something that's just a plain mess. You can (and really should) edit responses yourself, too, to fix any inconsistencies or oddities and to add your own style to get precisely what you're looking for!  
+# I strongly advise putting every AI response into a document of some type so that the response is not lost, in case the terminal history gets corrupted, etc. Furthermore, sometimes things will get weird or just go in a direction you don't like. Don't be afraid to try the request (or edit the request) again if you get something that doesn't fit your vision. These AI's simply don't have a human's level of attention to details and abstract thinking (nor have a true understanding of real life) and do make mistakes or write something that's just a plain mess. You can (and really should) edit responses yourself, too, to fix any inconsistencies, redundancies, or oddities and to add your own style to get precisely what you're looking for!  
 
 # To help you along the way: This tool easily adds escapes (\n,\t,\r,\", etc) to your paragraphs (it's for JavaScript, but it'll work for Python, too) You'll want to use these escapes on pretty much all of the paragraphs you send to the AI because Python can't handle breaks in strings, nor will it understand you actually want that " in there if it's not written like \".  Using this tool is the easiest way I found to format the strings properly. And "buy him a coffee" if you find the website useful :) :
 
@@ -48,7 +48,7 @@ completion = openai.ChatCompletion.create(
         ### Story Outline ###
         #####################
 
-        #{"role": "user", "content": "Build a story outline from the factors above. Give it a heading called: \"Story Chapters\""},
+        #{"role": "user", "content": "Build a story outline from the factors above. Give it a heading called: \"Story Outline\""},
         #{"role": "assistant", "content": ""},
 
 
@@ -70,7 +70,7 @@ completion = openai.ChatCompletion.create(
 
         # However, remember that you can only send the AI a limited amount of information (4096 tokens) in each request. You'll receive an error message if the request becomes too large. Furthermore, the more tokens you use, the more costly the story will become to write. Tokens are extremely cheap, but it's something to keep in mind. You can keep an eye on your usage here: https://platform.openai.com/account/usage
 
-        #{"role": "user", "content": "With chapter [chapter#], continue the story in depth and in great detail with inner thoughts and dialog, in an intriguing writing style. If included below, continue off of the content of the last chapter."},
+        #{"role": "user", "content": "With chapter [chapter#], begin or continue the story, as appropriate, in depth and in great detail with inner thoughts and dialog, in an intriguing writing style. If included below, continue off of the content of the last chapter."},
         #{"role": "assistant", "content": ""},
 
         # ...And you're done! Or are you? Continue on to "Edit the Story", if you so desire (if you do, be sure to comment out the prompt above).
