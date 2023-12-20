@@ -70,7 +70,7 @@ completion = openai.ChatCompletion.create(
 
         # However, remember that you can only send the AI a limited amount of information (4096 tokens) in each request. You'll receive an error message if the request becomes too large. Furthermore, the more tokens you use, the more costly the story will become to write. Tokens are extremely cheap, but it's something to keep in mind. You can keep an eye on your usage here: https://platform.openai.com/account/usage
 
-        #{"role": "user", "content": "With chapter [chapter#], begin or continue the story, as appropriate, in depth and in great detail with inner thoughts and dialog, in an intriguing writing style. If included below, continue off of the content of the last chapter."},
+        #{"role": "user", "content": "Write chapter [chapter#] as outlined above in depth and in great detail with inner thoughts and dialog, in an intriguing writing style. If included below, keep in mind the contents of the last chapter."},
         #{"role": "assistant", "content": ""},
 
         # ...And you're done! Or are you? Continue on to "Edit the Story", if you so desire (if you do, be sure to comment out the prompt above).
