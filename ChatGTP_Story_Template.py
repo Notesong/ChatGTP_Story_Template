@@ -11,15 +11,15 @@
 # https://www.freeformatter.com/javascript-escape.html
 
 
+# Replace Your Key (and keep the quotes there, otherwise it'll no longer be a string) below with the key you obtained in your OpenAI account (https://openai.com/). Your key can be found here: https://platform.openai.com/account/api-keys
 
-import openai
+from openai import OpenAI
 
-# Replace your_key (and keep the quotes there, otherwise it'll no longer be a string) below with the key you obtained in your OpenAI account (https://openai.com/). Your key can be found here: https://platform.openai.com/account/api-keys
+client = OpenAI(
+    api_key = "Your Key",
+)
 
-openai.api_key = "your_key"
-
-completion = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo", # You can change this based on your needs.
+chat_completion = client.chat.completions.create(
     messages=[
 
         # Replace [genre] with the genre you'd like the AI to write in (ex. Fantasy, Science Fiction, Biographical, etc.)
@@ -129,7 +129,8 @@ completion = openai.ChatCompletion.create(
 
         #{"role": "user", "content": ""},
         #{"role": "assistant", "content": ""},
-    ]
+    ],
+    model="gpt-3.5-turbo",
 )
 
-print(completion.choices[0].message.content)
+print(chat_completion.choices[0].message.content)
